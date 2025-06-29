@@ -1,0 +1,118 @@
+const multipleFormsConfig = [
+  {
+    title: 'Skills',
+    inputs: [
+      {
+        title: 'skill',
+        id: 'technical-skill',
+        type: 'text',
+        label: 'Technical Skill',
+        required: true,
+        placeholder: 'Software Engineer',
+      },
+      {
+        title: 'skillsDescription',
+        id: 'skills-description',
+        type: 'textarea',
+        label: 'Description of your skills',
+        required: false,
+        placeholder: null,
+      },
+    ],
+    key: 'skills-form-group',
+  },
+  {
+    title: 'Education',
+    inputs: [
+      {
+        title: 'university',
+        id: 'university-name',
+        type: 'text',
+        label: 'University',
+        placeholder: 'Enter university or school',
+        required: true,
+      },
+      {
+        title: 'degree',
+        id: 'degree-title',
+        type: 'text',
+        label: 'Degree',
+        placeholder: 'Enter your Degree title',
+        required: true,
+      },
+      {
+        title: 'educationStartDate',
+        id: 'education-start-date',
+        type: 'date',
+        label: 'Start Date',
+        placeholder: null,
+        required: false,
+      },
+      {
+        title: 'educationEndDate',
+        id: 'education-end-date',
+        type: 'date',
+        label: 'End Date',
+        placeholder: null,
+        required: false,
+      },
+      {
+        title: 'gpa',
+        id: 'gpa',
+        type: 'text',
+        label: 'Your GPA',
+        placeholder: 'e.g. 3.9',
+        required: false,
+      },
+    ],
+    key: 'education-form-group',
+  },
+  {
+    title: 'Experience',
+    inputs: [
+      {
+        title: 'company',
+        id: 'company-name',
+        type: 'text',
+        label: 'Company Name',
+        placeholder: 'Enter Company Name',
+        required: true,
+      },
+      {
+        title: 'jobTitle',
+        id: 'job-title',
+        type: 'text',
+        label: 'Job Title',
+        placeholder: 'Enter Job Title',
+        required: true,
+      },
+      {
+        title: 'jobStartDate',
+        id: 'job-start-date',
+        type: 'date',
+        label: 'Start Date',
+        placeholder: null,
+        required: false,
+      },
+      {
+        title: 'jobEndDate',
+        id: 'job-end-date',
+        type: 'date',
+        label: 'End Date',
+        placeholder: null,
+        required: false,
+      },
+      {
+        title: 'jobDescription',
+        id: 'job-description',
+        type: 'textarea',
+        label: 'Summary about your Job',
+        required: false,
+        placeholder: null,
+      },
+    ],
+    key: 'experience-form-group',
+  },
+];
+
+export default multipleFormsConfig;
