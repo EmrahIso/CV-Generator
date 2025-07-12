@@ -8,7 +8,7 @@ function Footer() {
             href='https://github.com/EmrahIso'
             target='_blank'
             rel='noopener noreferrer'
-            className='text-amber-600 dark:text-amber-500 decoration-1 underline'
+            className='text-orange-700 dark:text-orange-500 decoration-1 underline'
           >
             Emrah Isovic
           </a>
