@@ -7,12 +7,60 @@
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-@theme {
-  --font-body: 'Inter', 'sans-serif';
-}
-
 html {
   visibility: inherit;
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
   overflow-x: hidden;
+}
+
+*:focus {
+  outline: 2px solid black;
+}
+
+.filter-forms-inputs:focus + label {
+  outline: 2px solid black;
+}
+
+/* Print Styles */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  html {
+    zoom: 0.95;
+  }
+
+  /* Tailwind workaround */
+  @layer utilities {
+    .print\:block {
+      display: block !important;
+    }
+  }
+}
+
+/** Mozilla Firefox */
+@-moz-document url-prefix() {
+  .only-firefox {
+    padding-bottom: 0;
+  }
+}
+
+body {
+  font-family: 'Roboto', Arial, helvetica, sans-serif;
 }
