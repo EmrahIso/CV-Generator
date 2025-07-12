@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import CustomInput from './CustomInput';
-import FormMinimizeButton from './FormMinimizeButton';
-import FormSubmitButton from './FormSubmitButton';
+import CustomInput from './CustomInput.jsx';
+import FormMinimizeButton from './FormMinimizeButton.jsx';
+import FormSubmitButton from './FormSubmitButton.jsx';
 
 function SingleForm({
   heading,
@@ -10,14 +10,12 @@ function SingleForm({
   onFormMinimize,
   isFiltered,
   updateSingleFormInfo,
+  defaultSingleFormData,
+  formId,
 }) {
-  const inputsIDsArray = inputs.map((input) => input.id);
-
-  const defaultFormsData = {};
-
-  inputsIDsArray.forEach((id) => {
-    defaultFormsData[id] = '';
-  });
+  const defaultFormsData = defaultSingleFormData.find(
+    (formObj) => formObj.title === formId.slice(5)
+  ).values;
 
   const [formData, setFormData] = useState(defaultFormsData);
 
@@ -47,7 +45,7 @@ function SingleForm({
   return (
     <form
       action='#'
-      className='bg-white p-5 rounded-2xl border-1 border-slate-200 dark:bg-gray-700 dark:text-white dark:border-gray-600 mb-10'
+      className='bg-white p-5 rounded-2xl border-1 border-slate-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 mb-10'
       id={heading.toLowerCase()}
       onSubmit={submitSingleFormHandler}
     >
@@ -56,7 +54,7 @@ function SingleForm({
           'flex justify-between items-center ' + (isFiltered ? 'mb-7.5' : '')
         }
       >
-        <h2 className='text-xl relative text-stone-900 dark:text-gray-50 font-medium before:content-[""] before:h-1 w-[fit-content] before:bg-amber-500 before:absolute before:bottom-[20%] before:w-[40px] before:right-[-50px]'>
+        <h2 className='text-xl relative text-stone-900 dark:text-gray-50 font-medium before:content-[""] before:h-1 w-[fit-content] before:bg-orange-700  before:absolute before:bottom-[20%] before:w-[40px] before:right-[-50px]'>
           {heading}
         </h2>
         <FormMinimizeButton
@@ -77,6 +75,13 @@ function SingleForm({
                   label={inputObj.label}
                   required={inputObj.required}
                   placeholder={inputObj.placeholder}
+                  maxLength={inputObj.maxLength}
+                  minLength={inputObj.minLength}
+                  max={inputObj.max}
+                  min={inputObj.min}
+                  step={inputObj.step}
+                  pattern={inputObj.pattern}
+                  titleAttribute={inputObj.titleAttribute}
                   onInputChangeHandler={onInputChangeHandler}
                   value={formData[inputObj.id]}
                 />

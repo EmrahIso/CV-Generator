@@ -1,11 +1,12 @@
-import SingleForm from './SingleForm';
-import singleFormsConfig from '../singleFormsConfig';
-import formCheckboxTypes from '../formCheckboxConfig';
+import SingleForm from './SingleForm.jsx';
+import singleFormsConfig from '../singleFormsConfig.js';
+import formCheckboxTypes from '../formCheckboxConfig.js';
 
 function SingleFormsControl({
   onFormMinimize,
   filteredForms,
   updateSingleFormInfo,
+  defaultSingleFormData,
 }) {
   return (
     <div>
@@ -21,11 +22,13 @@ function SingleFormsControl({
         return (
           <div key={formInfoObj.key}>
             <SingleForm
+              formId={'form-' + formInfoObj.title.toLowerCase()}
               heading={formInfoObj.title}
               inputs={formInfoObj.inputs}
               onFormMinimize={() => onFormMinimize(id)}
               isFiltered={filteredForms[currentFormsFilterCheckboxObj.id]}
               updateSingleFormInfo={updateSingleFormInfo}
+              defaultSingleFormData={defaultSingleFormData}
             />
           </div>
         );
