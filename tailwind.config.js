@@ -2,11 +2,7 @@ const config = {
   theme: {
     extend: {
       colors: {},
-      fontFamily: {
-        body: ['Inter', 'sans-serif'],
-      },
+      fontFamily: {},
     },
   },
 };
-
-export default config;
