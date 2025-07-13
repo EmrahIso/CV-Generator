@@ -29,6 +29,9 @@ function FormFilter({
         Form Filter:{' '}
       </h2>
       <fieldset className='flex gap-2 flex-wrap mb-16'>
+        <legend className='mb-3.5 text-gray-600 dark:text-gray-400 text-sm'>
+          Select which forms to show using the checkboxes below.
+        </legend>
         {formCheckboxTypes.map((formCheckboxType) => {
           return (
             <FilterInputCheckbox

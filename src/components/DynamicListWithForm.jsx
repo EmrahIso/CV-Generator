@@ -39,7 +39,7 @@ function DynamicListWithForm({
                   onClick={editDynamicListItemHandler}
                 >
                   <img
-                    src='./edit.svg'
+                    src='./src/assets/edit.svg'
                     alt='edit button icon'
                     className='pointer-events-none h-6 w-6'
                   />
@@ -51,7 +51,7 @@ function DynamicListWithForm({
                   onClick={deleteDynamicListItemHandler}
                 >
                   <img
-                    src='./delete.svg'
+                    src='./src/assets/delete.svg'
                     alt='delete button icon'
                     className='pointer-events-none h-6 w-6'
                   />

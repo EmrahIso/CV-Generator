@@ -7,7 +7,7 @@ function FormMinimizeButton({ onFormMinimize, isMinimized }) {
         onClick={onFormMinimize}
       >
         <img
-          src='/minimize-icon.svg'
+          src='./src/assets/minimize-icon.svg'
           alt='Minimize form button icon'
           className={
             'h-6 w-6 pointer-events-none ' +
