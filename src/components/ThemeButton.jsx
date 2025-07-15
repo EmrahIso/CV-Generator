@@ -6,12 +6,12 @@ function ThemeButton({ changeColorThemeHandler, colorTheme }) {
       type='button'
     >
       <img
-        src='./src/assets/sunny-outline.svg'
+        src='./sunny-outline.svg'
         alt='Light Color Theme Icon'
         className={'h-7 w-7 ' + (colorTheme === 'light' ? 'hidden' : 'block')}
       />
       <img
-        src='./src/assets/moon-outline.svg'
+        src='./moon-outline.svg'
         alt='Dark Color Theme Icon'
         className={'h-7 w-7 ' + (colorTheme === 'dark' ? 'hidden' : 'block')}
       />
